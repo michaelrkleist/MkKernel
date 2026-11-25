@@ -1,0 +1,90 @@
+-- MK Kernel General Description --
+
+-- The Kernel --
+
+The kernel is written in modern C++ (currently ISO C++20 Standard) and built in
+Visual Studio (currently Visual Studio Professional 2022).  The kernel employs some
+STL features and no third party packages.
+
+The kernel is intended to be provide nothing more than what is absolutely necessary,
+that is, it is not intended to be "feature rich" or "option rich".
+
+The kernel supports near real-time and scientific applications that need extensive
+multi-threading and/or event-driven behavior.  The (current) key features include
+
+MkTaskPool - A facility for executing tasks (derived from MkTask) in any of the
+available threads of an appropriate priority.  Tasks that block can exit with an
+an "incomplete" status and be automatically rescheduled for re-entry.
+
+MkEventScheduler - A facility for attaching functors (derived from
+MkEventScheduler::Functor and MkTask) to Windows events that are executed when the
+corresponding event is signalled.
+
+MkTimeScheduler - A facility for attaching functors (derived from
+MkTimeScheduler::Functor and MkTask) to a time in the future that are executed when
+the time arrives.
+
+MkPolymorphicClass - A basic class factory facility.
+
+MkCriticalSection and MkCriticalSectionLock - A basic critical section facility.
+
+MkIBinaryStream - A fairly extensive interface for high performance binary
+serialization/deserialization of C++ class data.
+
+MkMemoryVessel - An implementation of the MkIBinaryStream interface for main memory
+consisting of an arbitrary number of memory "blocks".
+
+MkSocket class family - A BSD socket facility oriented towards event driven socket
+communication.
+
+MkMBTP - A binary transport protocol implemented on top of MkSocket.
+
+-- The Distributed Computing Facility --
+
+The distributed computing facility enables high performance, robust work distribution
+to external server systems.  It uses a client-service model that supports various
+topologies (including one client to many service systems, many clients to one service
+system, ...).  Requests and responses are serialized and transmitted using the kernel
+serialization and socket facilities.  Service requests are monitored and re-issued to
+other service systems if the service system goes down or is unresponsive.    The
+facility includes user defined "resource labels" that indicate whether a service has
+certain resources (e.g. access to a file, lots of main memory) that a client can
+use to determine whether to attach to a particular service system.
+
+The distributed computing facility includes
+
+MkServiceMaster - The service manager on the service system that is aware of what
+services are available on the system.  The service master accepts and verifies
+service connections.
+
+MkService - The base class for all services that handles core client interactions.
+
+MkClient - The base class for all clients that handles core service interactions.
+
+-- Why? --
+
+All of the facilities above were present in my previous employer's primary system
+and all of them had vastly more code and complexity in them than needed.  Furthermore
+standards like SOAP (the S standing for "simple"--oh the irony) are verbose and 
+incredibly inefficient due to the desire to be all things to all people.  I wanted
+to show that there is a different way.
+
+-- The Bad Things --
+
+The kernel and distributed computing facility are not without weaknesses and flaws.
+Some of them are
+
+1 - The facilities are not multi-platform and multi-language.  The kernel and
+distributed computing facility can easily be moved to Linux variants and I will do
+so if there is any meaningful interest.  But Java, or Go, or Rust, etc.--pretty much
+forget it.
+
+2 - The facilities make heavy usage of smart pointers and memory allocation.  They
+are not free.
+
+-- The Future --
+
+The kernel is missing many, many basic features (e.g. a file abstraction and
+corresponding instantiations).  I plan to add them as the spirit, or interest, moves
+me.  I definitely plan to add mathematics sufficient to support basic graphics
+and, heaven help me, a Vulcan graphics interface.

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="ReleaseNoOpt|x64">
+      <Configuration>ReleaseNoOpt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d79c7541-3702-48cc-be27-e800c796c793}</ProjectGuid>
+    <RootNamespace>MkFoundation</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;MKFOUNDATION_EXPORTS;MK_BUILD_FOUNDATION;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Foundation\MkFoundationPCH.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Header\Foundation;$(SolutionDir)Source;$(SolutionDir)Header</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;MKFOUNDATION_EXPORTS;MK_BUILD_FOUNDATION;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Foundation\MkFoundationPCH.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Header\Foundation;$(SolutionDir)Source;$(SolutionDir)Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'">
+    <ClCompile>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Header\Foundation;$(SolutionDir)Source;$(SolutionDir)Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Basic\MkException.cpp" />
+    <ClCompile Include="Basic\MkHashCode.cpp" />
+    <ClCompile Include="Basic\MkHTMLString.cpp" />
+    <ClCompile Include="Basic\MkDuration.cpp" />
+    <ClCompile Include="Basic\MkMemoryVessel.cpp" />
+    <ClCompile Include="Basic\MkPolymorphicClass.cpp" />
+    <ClCompile Include="Basic\MkString.cpp" />
+    <ClCompile Include="Basic\MkStringPattern.cpp" />
+    <ClCompile Include="Basic\MkTime.cpp" />
+    <ClCompile Include="Basic\MkUID.cpp" />
+    <ClCompile Include="InputOutput\MkSocket.cpp" />
+    <ClCompile Include="MkFoundationPCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MkFoundationPCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='ReleaseNoOpt|x64'">MkFoundationPCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Process\MkCallStack.cpp" />
+    <ClCompile Include="Process\MkCriticalSection.cpp" />
+    <ClCompile Include="Process\MkOSEvent.cpp" />
+    <ClCompile Include="Process\MkThread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkException.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkHashCode.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkUID.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkHTMLString.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkIBinarySerializable.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkIBinaryStream.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkDuration.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkMemoryVessel.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkPolymorphicClass.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkString.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkStringPattern.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkTime.h" />
+    <ClInclude Include="..\..\Header\Foundation\InputOutput\MkDebugText.h" />
+    <ClInclude Include="..\..\Header\Foundation\InputOutput\MkIP.h" />
+    <ClInclude Include="..\..\Header\Foundation\InputOutput\MkSocket.h" />
+    <ClInclude Include="..\..\Header\Foundation\Math\MkOperators.h" />
+    <ClInclude Include="..\..\Header\Foundation\MkFoundation.h" />
+    <ClInclude Include="..\..\Header\Foundation\Process\MkCallStack.h" />
+    <ClInclude Include="..\..\Header\Foundation\Process\MkCriticalSection.h" />
+    <ClInclude Include="..\..\Header\Foundation\Process\MkOSEvent.h" />
+    <ClInclude Include="..\..\Header\Foundation\Process\MkThread.h" />
+    <ClInclude Include="MkFoundationPCH.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

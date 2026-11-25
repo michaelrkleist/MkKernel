@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="MkTestLibraryPCH.cpp" />
+    <ClCompile Include="TestClient\MkSleep.cpp">
+      <Filter>TestClient</Filter>
+    </ClCompile>
+    <ClCompile Include="TestClient\MkSleepService.cpp">
+      <Filter>TestClient</Filter>
+    </ClCompile>
+    <ClCompile Include="TestClient\MkSleepClient.cpp">
+      <Filter>TestClient</Filter>
+    </ClCompile>
+    <ClCompile Include="TestBasic\MkTestPolymorphic.cpp">
+      <Filter>TestBasic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Header\TestLibrary\TestClient\MkSleep.h">
+      <Filter>TestClient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\TestLibrary\TestClient\MkSleepService.h">
+      <Filter>TestClient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\TestLibrary\TestClient\MkSleepClient.h">
+      <Filter>TestClient</Filter>
+    </ClInclude>
+    <ClInclude Include="MkTestLibraryPCH.h" />
+    <ClInclude Include="..\..\Header\TestLibrary\TestBasic\MkTestPolymorphic.h">
+      <Filter>TestBasic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TestClient">
+      <UniqueIdentifier>{4bb84112-f0c7-4426-af63-0c42ac67351a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestBasic">
+      <UniqueIdentifier>{149730f5-17fd-4088-a47d-806548c2c5a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

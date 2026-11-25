@@ -1,0 +1,14 @@
+﻿  MkTestApplicationPCH.cpp
+  MkSleep.cpp
+  MkSleepClient.cpp
+C:\MkRepository\Header\TestApplication\Test\MkSleepClient.h(16,72): warning C4275: non dll-interface class 'MkClient' used as base for dll-interface class 'MkSleepClient'
+  (compiling source file 'Test/MkSleepClient.cpp')
+      C:\MkRepository\Header\Framework\Services\MkClient.h(20,7):
+      see declaration of 'MkClient'
+      C:\MkRepository\Header\TestApplication\Test\MkSleepClient.h(16,33):
+      see declaration of 'MkSleepClient'
+  
+  MkSleepService.cpp
+  Generating Code...
+     Creating library C:\MkRepository\x64\ReleaseNoOpt\MkTestApplication.lib and object C:\MkRepository\x64\ReleaseNoOpt\MkTestApplication.exp
+  MkTestApplication.vcxproj -> C:\MkRepository\x64\ReleaseNoOpt\MkTestApplication.dll

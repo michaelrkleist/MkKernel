@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Foundation">
+    </Filter>
+    <Filter Include="Basic">
+    </Filter>
+    <Filter Include="InputOutput">
+    </Filter>
+    <Filter Include="Math">
+    </Filter>
+    <Filter Include="Process">
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MkFoundationPCH.cpp">
+      <Filter>Foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic\MkString.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic\MkStringPattern.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\MkCallStack.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\MkCriticalSection.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\MkOSEvent.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic\MkMemoryVessel.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="InputOutput\MkSocket.cpp">
+      <Filter>InputOutput</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic\MkDuration.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\MkThread.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic\MkTime.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic\MkPolymorphicClass.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic\MkHTMLString.cpp" />
+    <ClCompile Include="Basic\MkUID.cpp" />
+    <ClCompile Include="Basic\MkException.cpp" />
+    <ClCompile Include="Basic\MkHashCode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MkFoundationPCH.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkStringPattern.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\MkFoundation.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Math\MkOperators.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Process\MkCallStack.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Process\MkCriticalSection.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Process\MkOSEvent.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Process\MkThread.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\InputOutput\MkDebugText.h">
+      <Filter>InputOutput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkPolymorphicClass.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkIBinaryStream.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkIBinarySerializable.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkMemoryVessel.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\InputOutput\MkSocket.h">
+      <Filter>InputOutput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkDuration.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkTime.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\InputOutput\MkIP.h">
+      <Filter>InputOutput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkHTMLString.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkString.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkUID.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkException.h" />
+    <ClInclude Include="..\..\Header\Foundation\Basic\MkHashCode.h" />
+  </ItemGroup>
+</Project>

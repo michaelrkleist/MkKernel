@@ -1,0 +1,26 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2025 by Michael R. Kleist
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma once
+
+// Mk includes.
+#include "MkTypes.h"
+
+// STL includes.
+#include <map>
+#include <memory>
+#include <vector>
+
+// Limit what is included when windows.h is included.
+#define WIN32_LEAN_AND_MEAN
+//#include <windows.h>
+
+// DLL support.
+// Normally import the DLL symbols.
+#define MK_EXPORT_TESTLIBRARY __declspec(dllimport)
+
+// Except when building the particular DLL.
+#ifdef MK_BUILD_TESTLIBRARY
+#undef MK_EXPORT_TESTLIBRARY
+#define MK_EXPORT_TESTLIBRARY  __declspec(dllexport)
+#endif

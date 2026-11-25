@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2025 by Michael R. Kleist
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma once
+
+// Mk includes.
+#include "MkFoundation.h"
+#include "Basic\MkString.h"
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// MkPolymorphicClass
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class MK_EXPORT_FOUNDATION MkPolymorphicClass
+{
+public:
+    MkPolymorphicClass() = default;
+    virtual ~MkPolymorphicClass() = default;
+
+    // NOTE: ONLY call during static initialization to prevent create instance race
+    // conditions.  MRK.
+    static bool Register(const MkAString& className, void* (*Create)());
+
+    static void* CreateInstance(const MkAString& className);
+
+    virtual const MkAString& GetName() = 0;
+};

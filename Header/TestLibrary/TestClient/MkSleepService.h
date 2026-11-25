@@ -1,0 +1,30 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2025 by Michael R. Kleist
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma once
+
+// Mk includes.
+#include "MkTestLibrary.h"
+#include "Services\MkService.h"
+#include "TestClient\MkSleep.h"
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// MkSleepService
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class MkSleepService : public MkSleep, public MkService
+{
+public:
+    MK_EXPORT_TESTLIBRARY MkSleepService(const MkAString& name) :
+        MkService(name, 3)
+    { }
+    MK_EXPORT_TESTLIBRARY ~MkSleepService() override = default;
+
+    const MkService::Response MK_EXPORT_TESTLIBRARY ProcessRequest(const MkService::Request& request) override;
+
+    enum CommandCode : mkuint32
+    {
+        eSleep = 0
+    };
+};

@@ -1,0 +1,4 @@
+C:\MkRepository\Source\TestApplication\MkTestApplicationPCH.cpp;C:\MkRepository\Source\TestApplication\x64\Release\MkTestApplicationPCH.obj
+C:\MkRepository\Source\TestApplication\Test\MkSleep.cpp;C:\MkRepository\Source\TestApplication\x64\Release\MkSleep.obj
+C:\MkRepository\Source\TestApplication\Test\MkSleepClient.cpp;C:\MkRepository\Source\TestApplication\x64\Release\MkSleepClient.obj
+C:\MkRepository\Source\TestApplication\Test\MkSleepService.cpp;C:\MkRepository\Source\TestApplication\x64\Release\MkSleepService.obj

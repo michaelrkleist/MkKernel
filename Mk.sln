@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MkTestHarness", "Source\MkTestHarness\MkTestHarness.vcxproj", "{E3F611A8-4EAE-41C8-BA73-8B9F826C27D3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4A7E7347-A55A-42BF-A213-6683880721A3} = {4A7E7347-A55A-42BF-A213-6683880721A3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MkFramework", "Source\Framework\MkFramework.vcxproj", "{0EB24B34-7B72-4466-AA05-64A6A11ECC1E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MkFoundation", "Source\Foundation\MkFoundation.vcxproj", "{D79C7541-3702-48CC-BE27-E800C796C793}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MkServiceMain", "Source\MkServiceMain\MkServiceMain.vcxproj", "{34B753DD-065A-4CA3-9525-5EBE27D8F8AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4A7E7347-A55A-42BF-A213-6683880721A3} = {4A7E7347-A55A-42BF-A213-6683880721A3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MkTestLibrary", "Source\TestLibrary\MkTestLibrary.vcxproj", "{4A7E7347-A55A-42BF-A213-6683880721A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+		ReleaseNoOpt|x64 = ReleaseNoOpt|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3F611A8-4EAE-41C8-BA73-8B9F826C27D3}.Release|x64.ActiveCfg = Release|x64
+		{E3F611A8-4EAE-41C8-BA73-8B9F826C27D3}.Release|x64.Build.0 = Release|x64
+		{E3F611A8-4EAE-41C8-BA73-8B9F826C27D3}.ReleaseNoOpt|x64.ActiveCfg = ReleaseNoOpt|x64
+		{E3F611A8-4EAE-41C8-BA73-8B9F826C27D3}.ReleaseNoOpt|x64.Build.0 = ReleaseNoOpt|x64
+		{0EB24B34-7B72-4466-AA05-64A6A11ECC1E}.Release|x64.ActiveCfg = Release|x64
+		{0EB24B34-7B72-4466-AA05-64A6A11ECC1E}.Release|x64.Build.0 = Release|x64
+		{0EB24B34-7B72-4466-AA05-64A6A11ECC1E}.ReleaseNoOpt|x64.ActiveCfg = ReleaseNoOpt|x64
+		{0EB24B34-7B72-4466-AA05-64A6A11ECC1E}.ReleaseNoOpt|x64.Build.0 = ReleaseNoOpt|x64
+		{D79C7541-3702-48CC-BE27-E800C796C793}.Release|x64.ActiveCfg = Release|x64
+		{D79C7541-3702-48CC-BE27-E800C796C793}.Release|x64.Build.0 = Release|x64
+		{D79C7541-3702-48CC-BE27-E800C796C793}.ReleaseNoOpt|x64.ActiveCfg = ReleaseNoOpt|x64
+		{D79C7541-3702-48CC-BE27-E800C796C793}.ReleaseNoOpt|x64.Build.0 = ReleaseNoOpt|x64
+		{34B753DD-065A-4CA3-9525-5EBE27D8F8AB}.Release|x64.ActiveCfg = Release|x64
+		{34B753DD-065A-4CA3-9525-5EBE27D8F8AB}.Release|x64.Build.0 = Release|x64
+		{34B753DD-065A-4CA3-9525-5EBE27D8F8AB}.ReleaseNoOpt|x64.ActiveCfg = ReleaseNoOpt|x64
+		{34B753DD-065A-4CA3-9525-5EBE27D8F8AB}.ReleaseNoOpt|x64.Build.0 = ReleaseNoOpt|x64
+		{4A7E7347-A55A-42BF-A213-6683880721A3}.Release|x64.ActiveCfg = Release|x64
+		{4A7E7347-A55A-42BF-A213-6683880721A3}.Release|x64.Build.0 = Release|x64
+		{4A7E7347-A55A-42BF-A213-6683880721A3}.ReleaseNoOpt|x64.ActiveCfg = ReleaseNoOpt|x64
+		{4A7E7347-A55A-42BF-A213-6683880721A3}.ReleaseNoOpt|x64.Build.0 = ReleaseNoOpt|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D0A18F0-5DCA-4720-A544-226CBD07EA97}
+	EndGlobalSection
+EndGlobal

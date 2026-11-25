@@ -1,0 +1,53 @@
+NOTE: This document is way out of date.  I will be replacing it.  MRK.
+
+Rules for Service/Client
+
+The class's (e.g. Calculate) distributable method (e.g. CalculatePi) must be virtual.  See
+NOTES below.
+
+The service version of the class (e.g. CalculateService) must be inherited from both
+  the base class (e.g. Calculate) and the service class (i.e. MkService).
+  
+The service version of the class (e.g. CalculateService) must
+	1 - Be given the name (e.g. "Calculate") the same as the client version (e.g. CalculateClient).
+	3 - During construction, add any appropriate resource labels.
+	4 = After construction, add the service to the singleton service master (i.e. MkServiceMaster).
+	5 - Override the processing method (i.e. ProcessRequest) of the service class.
+	6 - The processing method must
+		A - Deserialize the arguments for the distributable method.
+		B - Call the distributable method.
+		C - Prepare a MBTP response message including serializing the method return value if
+		  it is not void.
+		D - Write the response message to the MBTP server socket.
+		
+The client version of the class (e.g. CalculateClient) must be inherited from both
+  the base class (e.g. Calculate) and the client class (i.e. MkClient).
+
+The client version of the class (e.g. CalculateClient) must
+	1 - Be given the name (e.g. "Calculate") the same as the service version (e.g. CalculateService).
+	2 - Be given a list of IP address/port pairs that identify the potential service hosts of the
+	  service.  If this information is not provided or none of the service hosts can be contacted,
+      the service is provided locally.
+	3 - Override the distributable method of the base class (e.g. "CalculatePi").
+    4 - The overridden distributable method must
+		A - Identify any resources needed to execute the method with resource labels.
+		B - Ask the MkClient class for the MBTP server socket to use.  See NOTES below.
+		C - Write the MBTP request message to the MBTP server socket.
+		D - Ask the MkClient class to read the response message.  See NOTES below.
+		E - Deserialize the response message and return.  See NOTES below.
+			
+NOTES
+
+1 - Each service/client pair has exactly one method that can be distributed.  I considered extending
+  the design to support multiple distributed methods in one service/client pair.  Doing so added
+  complexity that I believe is not justified by the additional functionality.  It is straight-forward
+  to build multiple service/client pairs if there is need for more than one distributable method.
+2 - Each client instance must not be entered concurrently in more than one thread.  Handling all
+  of the reentrancy problems would unnecessarily complicate the code.  Create multiple clients if
+  needed.
+3 - A standard service request blocks until a response is received, the timeout occurs, or the service
+  socket is closed.  Since the standard service request causes a thread to be dedicated, a second,
+  non-blocking, service request will be provided that can be by a task pool task taking advantage of
+  the incomplete task feature.
+
+	

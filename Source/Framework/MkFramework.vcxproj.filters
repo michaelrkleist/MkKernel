@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Framework">
+    </Filter>
+    <Filter Include="Process">
+    </Filter>
+    <Filter Include="Services">
+    </Filter>
+    <Filter Include="Basic">
+      <UniqueIdentifier>{cb848020-6c74-4e5c-aa80-3dc169d3a81e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InputOutput">
+      <UniqueIdentifier>{0ef94fff-ebf5-4dc5-b508-bb730db290c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Header\Framework\MkFramework.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="MkFrameworkPCH.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\Services\MkResourceLabel.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\Services\MkService.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\Services\MkServiceMaster.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\Process\MkFrameworkApplication.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\Services\MkClient.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Foundation\Process\MkSingleton.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\Process\MkScheduler.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\Process\MkTask.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\Process\MkTaskPool.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Framework\InputOutput\MkMBTP.h">
+      <Filter>InputOutput</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MkFrameworkPCH.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\MkResourceLabel.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\MkService.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\MkServiceMaster.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\MkFrameworkApplication.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Services\MkClient.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\MkScheduler.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\MkTask.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\MkTaskPool.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="InputOutput\MkMBTP.cpp">
+      <Filter>InputOutput</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
